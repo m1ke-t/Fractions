@@ -8,6 +8,6 @@ public class GCD {
             a = b;
             b = tmp;
         }
-        return Math.abs(a);
+        return a;
     }
 }

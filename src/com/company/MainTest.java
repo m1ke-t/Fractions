@@ -87,7 +87,7 @@ public class MainTest {
         Fraction f1 = new Fraction(2, 7);
         Fraction res = f1.minus(100);
 
-        assertEquals((Integer)698, res.getNumerator());
+        assertEquals((Integer)(698), res.getNumerator());
         assertEquals((Integer)(-7), res.getDenominator());
     }
     @Test
