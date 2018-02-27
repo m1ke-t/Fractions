@@ -88,7 +88,7 @@ public class Fraction implements IFraction {
     public Integer getNumerator() {
         return numerator;
     }
-    
+
     public Integer getDenominator() {
         return denominator;
     }
