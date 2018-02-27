@@ -27,12 +27,19 @@ public class Fraction implements IFraction {
         return reduceFraction(this);
     }
 
+    public Fraction plus(Integer integer) {
+       return plus(new Fraction(integer, 1));
+    }
+
     @Override
     public Fraction minus(Fraction fraction) {
         this.numerator = this.numerator*fraction.denominator - fraction.numerator*this.denominator;
         this.denominator *= fraction.denominator;
         return reduceFraction(this);
 
+    }
+    public Fraction minus(Integer integer) {
+        return minus(new Fraction(integer, 1));
     }
 
     @Override
@@ -41,6 +48,9 @@ public class Fraction implements IFraction {
         this.denominator *= fraction.denominator;
         return reduceFraction(this);
 
+    }
+    public Fraction multiply(Integer integer) {
+        return multiply(new Fraction(integer, 1));
     }
 
     @Override
@@ -55,6 +65,11 @@ public class Fraction implements IFraction {
         return reduceFraction(this);
 
     }
+    public Fraction divide(Integer integer) {
+        return divide(new Fraction(integer, 1));
+    }
+
+
 
     public Fraction(Integer numerator, Integer denominator) throws ArithmeticException{
         if (denominator == 0) {
@@ -82,6 +97,12 @@ public class Fraction implements IFraction {
     @Override
     public String toString() {
         if (denominator == 1) return numerator.toString();
+        if (denominator.equals(numerator)) return "1";
+        if (numerator > denominator){
+            if (numerator%denominator != 0)
+            return numerator/denominator + "(" + numerator%denominator + "/" + denominator + ")";
+            else return numerator/denominator + "";
+        }
         return  numerator + "/" + denominator;
     }
 }

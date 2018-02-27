@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class Main {
     static final Logger log = LoggerFactory.getLogger(Main.class.getName());
-    
+
 
     public static void main(String[] args) {
 
@@ -25,6 +25,12 @@ public class Main {
         Fraction f2 = new Fraction(2, 3);
         log.info("Fraction 2/3 created.");
         Fraction res = f1.plus(f2);
-        log.info("1/3 + 2/3 = " + res.toString());
+        log.info("1/3 + 2/3 = " + res);
+
+        log.info("Creating fraction 100/5...");
+        Fraction f3 = new Fraction(100, 5);
+        res.multiply(f3);
+        log.info("1 * 100/5 = " + res);
+
     }
 }
