@@ -11,9 +11,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //BasicConfigurator.configure();
-        final String message = "Hello logging!";
-
 
         try {
             log.info("Creating fraction 5/0...");
@@ -21,8 +18,6 @@ public class Main {
         } catch (ArithmeticException e) {
             log.error(e.toString());
         }
-
-
 
         log.info("Creating fraction 1/3...");
         Fraction f1 = new Fraction(1, 3);
